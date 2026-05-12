@@ -1,4 +1,4 @@
-package com.miladsadeghi.model.record;
+package com.miladsadeghi.record;
 
 public record PersonRecord(String firstname, String lastname, int age  ) {
 

@@ -1,23 +1,21 @@
 package com.miladsadeghi;
 
-import com.miladsadeghi.model.bean.PersonBean;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
-import com.miladsadeghi.model.record.PersonRecord;
+import com.miladsadeghi.api.MonoMapperFacade;
+import com.miladsadeghi.bean.PersonBean;
+import com.miladsadeghi.record.PersonRecord;
 import org.junit.jupiter.api.Test;
-
-import java.beans.IntrospectionException;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class BeanBridgeTest {
 
   @Test
-  void testConvertBeanToRecordWithNullValues()
-      throws ReflectiveOperationException, IntrospectionException {
+  void testMapBeanToRecordWithNullValues(){
 
     PersonBean person = new PersonBean(null, null, 27);
 
-    var record = BeanBridge.convertBeanToRecord(person, PersonRecord.class);
+    var record = MonoMapperFacade.map(person, PersonRecord.class);
     assertNull(record.firstname());
     assertNull(record.lastname());
     assertEquals(27, record.age());
@@ -25,12 +23,11 @@ class BeanBridgeTest {
   }
 
   @Test
-  void testConvertBeanToRecordWithActualValues()
-      throws ReflectiveOperationException, IntrospectionException {
+  void testMapBeanToRecordWithActualValues(){
 
     PersonBean person = new PersonBean("milad", "sadeghi", 27);
 
-    var record = BeanBridge.convertBeanToRecord(person, PersonRecord.class);
+    var record = MonoMapperFacade.map(person, PersonRecord.class);
     assertEquals("milad", record.firstname());
     assertEquals("sadeghi", record.lastname());
     assertEquals(27, record.age());
@@ -38,10 +35,9 @@ class BeanBridgeTest {
   }
 
   @Test
-  void testConvertRecordToBeanWithNullValues()
-      throws ReflectiveOperationException, IntrospectionException {
+  void testMapRecordToBeanWithNullValues() {
     var personRecord = new PersonRecord(null, null, 27);
-    var bean = BeanBridge.convertRecordToBean(personRecord, PersonBean.class);
+    var bean = MonoMapperFacade.map(personRecord, PersonBean.class);
 
     assertNull(bean.getFirstname());
     assertNull(bean.getLastname());
@@ -49,11 +45,10 @@ class BeanBridgeTest {
   }
 
   @Test
-  void testConvertRecordToBeanWithActualValues()
-      throws ReflectiveOperationException, IntrospectionException {
+  void testMapRecordToBeanWithActualValues() {
 
     var personRecord = new PersonRecord("milad", "sadeghi", 27);
-    var bean = BeanBridge.convertRecordToBean(personRecord, PersonBean.class);
+    var bean = MonoMapperFacade.map(personRecord, PersonBean.class);
 
     assertEquals("milad", bean.getFirstname());
     assertEquals("sadeghi", bean.getLastname());

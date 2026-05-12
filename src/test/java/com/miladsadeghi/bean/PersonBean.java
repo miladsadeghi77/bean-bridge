@@ -1,4 +1,4 @@
-package com.miladsadeghi.model.bean;
+package com.miladsadeghi.bean;
 
 public class PersonBean {
   private String firstname;
@@ -36,5 +36,14 @@ public class PersonBean {
 
   public void setAge(int age) {
     this.age = age;
+  }
+
+  @Override
+  public String toString() {
+    return "PersonBean{" +
+        "firstname='" + firstname + '\'' +
+        ", lastname='" + lastname + '\'' +
+        ", age=" + age +
+        '}';
   }
 }
