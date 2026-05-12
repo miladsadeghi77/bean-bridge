@@ -46,8 +46,7 @@ public class BeanToRecordMapper implements IMonoMapper{
     }
 
     Constructor<?> constructor = targetType.getConstructor(recordComponentTypes);
-    Object record = constructor.newInstance(recordComponentValues);
 
-    return record;
+    return constructor.newInstance(recordComponentValues);
   }
 }
