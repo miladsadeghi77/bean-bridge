@@ -1,4 +1,4 @@
-package com.miladsadeghi.bean;
+package com.monomapper.bean;
 
 public class PersonBean {
   private String firstname;

@@ -1,4 +1,4 @@
-package com.miladsadeghi.model;
+package com.monomapper.model;
 
 public enum MappingType {
   BEAN_TO_BEAN,

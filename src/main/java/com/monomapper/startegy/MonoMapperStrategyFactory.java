@@ -1,11 +1,11 @@
-package com.miladsadeghi.startegy;
+package com.monomapper.startegy;
 
-import com.miladsadeghi.api.IMonoMapper;
-import com.miladsadeghi.mapper.BeanToBeanMapper;
-import com.miladsadeghi.mapper.BeanToRecordMapper;
-import com.miladsadeghi.mapper.RecordToBeanMapper;
-import com.miladsadeghi.mapper.RecordToRecordMapper;
-import com.miladsadeghi.model.MappingType;
+import com.monomapper.api.IMonoMapper;
+import com.monomapper.mapper.BeanToBeanMapper;
+import com.monomapper.mapper.BeanToRecordMapper;
+import com.monomapper.mapper.RecordToBeanMapper;
+import com.monomapper.mapper.RecordToRecordMapper;
+import com.monomapper.model.MappingType;
 import java.util.EnumMap;
 import java.util.Map;
 

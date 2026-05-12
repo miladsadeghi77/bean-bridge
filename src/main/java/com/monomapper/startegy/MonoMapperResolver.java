@@ -1,6 +1,6 @@
-package com.miladsadeghi.startegy;
+package com.monomapper.startegy;
 
-import com.miladsadeghi.model.MappingType;
+import com.monomapper.model.MappingType;
 
 public class MonoMapperResolver {
 

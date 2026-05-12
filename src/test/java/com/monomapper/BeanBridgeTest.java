@@ -1,11 +1,11 @@
-package com.miladsadeghi;
+package com.monomapper;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 
-import com.miladsadeghi.api.MonoMapperFacade;
-import com.miladsadeghi.bean.PersonBean;
-import com.miladsadeghi.record.PersonRecord;
+import com.monomapper.api.MonoMapperFacade;
+import com.monomapper.bean.PersonBean;
+import com.monomapper.record.PersonRecord;
 import org.junit.jupiter.api.Test;
 
 class BeanBridgeTest {

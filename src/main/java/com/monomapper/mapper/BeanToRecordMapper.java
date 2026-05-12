@@ -1,6 +1,6 @@
-package com.miladsadeghi.mapper;
+package com.monomapper.mapper;
 
-import com.miladsadeghi.api.IMonoMapper;
+import com.monomapper.api.IMonoMapper;
 import java.beans.BeanInfo;
 import java.beans.IntrospectionException;
 import java.beans.Introspector;

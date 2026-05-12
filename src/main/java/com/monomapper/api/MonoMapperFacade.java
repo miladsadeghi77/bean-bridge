@@ -1,8 +1,8 @@
-package com.miladsadeghi.api;
+package com.monomapper.api;
 
-import com.miladsadeghi.model.MappingType;
-import com.miladsadeghi.startegy.MonoMapperResolver;
-import com.miladsadeghi.startegy.MonoMapperStrategyFactory;
+import com.monomapper.model.MappingType;
+import com.monomapper.startegy.MonoMapperResolver;
+import com.monomapper.startegy.MonoMapperStrategyFactory;
 import java.beans.IntrospectionException;
 import java.lang.reflect.InvocationTargetException;
 
