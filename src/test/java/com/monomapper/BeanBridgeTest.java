@@ -56,5 +56,27 @@ class BeanBridgeTest {
 
   }
 
+  @Test
+  void mapBeanToBeanWithActualValues() {
+
+    var personBean = new PersonBean("milad", "sadeghi", 27);
+    var bean = MonoMapperFacade.map(personBean, PersonBean.class);
+
+    assertEquals("milad", bean.getFirstname());
+    assertEquals("sadeghi", bean.getLastname());
+    assertEquals(27, bean.getAge());
+
+  }
+  @Test
+  void mapRecordToRecordWithActualValues() {
+
+    var personRecord = new PersonRecord("milad", "sadeghi", 27);
+    var record = MonoMapperFacade.map(personRecord, PersonRecord.class);
+    assertEquals("milad", record.firstname());
+    assertEquals("sadeghi", record.lastname());
+    assertEquals(27, record.age());
+
+  }
+
 }
 
